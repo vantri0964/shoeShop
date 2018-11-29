@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sport A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+	<title>Header | Shoes Shop</title>
 	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="../js/jquery.min.js"></script>
@@ -14,7 +14,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Sport Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script type="application/x-javascript"> 
+		addEventListener("load", function() { 
+			setTimeout(hideURLbar, 0); 
+		}, false); 
+		function hideURLbar(){ 
+			window.scrollTo(0,1); } 
+	</script>
 	<!--fonts-->
 	<link rel="stylesheet" href="../css/flexslider.css" type="text/css" media="screen" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -82,15 +88,23 @@
 				<div class="h_menu4"><!-- start h_menu4 -->
 					<a class="toggleMenu" href="#">Menu</a>
 					<ul class="nav">
-						<li class="active"><a href="../product.html">Giày Nam</a></li>
-						<li><a href="../product.html">Giày Nữ</a></li>		
-						<li><a href="../product.html">Giới thiệu</a></li>
-						<li><a href="../product.html">Báo giá <i> </i></a>
+						<li class="active"><a href="../product.html">Giày Nam <i> </i></a>
 							<ul>
-								<li><a href="../contact.html">Thấp đến cao</a></li>
-								<li><a href="../account.html">Cao đến thấp</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
 							</ul>
 						</li>
+
+						<li><a href="../product.html">Giày Nữ <i> </i></a>
+							<ul>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+							</ul>
+						</li>		
+						<li><a href="../product.html">Giới thiệu</a></li>
+						<li><a href="../views/contact.php">Liên hệ</a></li>
 					</ul>
 					<script type="text/javascript" src="../js/nav.js"></script>
 				</div><!-- end h_menu4 -->

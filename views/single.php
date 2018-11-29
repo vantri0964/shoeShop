@@ -75,7 +75,7 @@
 				<div class="product-top">
 		<div class="col-md-4 grid-product-in">	
 		<div class=" product-grid">	
-			<a href="single.html"><img class="img-responsive " src="images/sh2.png" alt=""></a>		
+			<a href="single.html"><img class="img-responsive " src="../images/sh2.png" alt=""></a>		
 			<div class="shoe-in">
 				<h6><a href="single.html">Lorem Ipsum is simply</a></h6>
 				<label>$67.99</label>
@@ -87,7 +87,7 @@
 		</div>
 		<div class="col-md-4 grid-product-in">	
 		<div class=" product-grid">	
-			<a href="single.html"><img class="img-responsive " src="images/pr1.png" alt=""></a>
+			<a href="single.html"><img class="img-responsive " src="../images/pr1.png" alt=""></a>
 			<div class="shoe-in">
 				<h6><a href="single.html">Lorem Ipsum is simply</a></h6>
 				<label>$67.99</label>
@@ -99,7 +99,7 @@
 		</div>
 		<div class="col-md-4 grid-product-in">	
 		<div class=" product-grid">	
-			<a href="single.html"><img class="img-responsive " src="images/pr.png" alt=""></a>
+			<a href="single.html"><img class="img-responsive " src="../images/pr.png" alt=""></a>
 			<div class="shoe-in">
 				<h6><a href="single.html">Lorem Ipsum is simply </a></h6>
 				<label>$67.99</label>
