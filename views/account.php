@@ -1,19 +1,19 @@
 	<?php 
-		require_once('./header.php');
+		require_once('header.php');
 	 ?>
 	<div class="container">
 		<div class="account">
 			<h2>Đăng nhập</h2>
 			<div class="account-pass">
 				<div class="col-md-7 account-top">
-					<form>
+					<form action="../controller/c_login.php" method="POST">
 						<div> 	
-							<span>Email</span>
-							<input type="text"> 
+							<span>Tài khoản</span>
+							<input type="text" name="username" placeholder="Nhập tài khoản" required/> 
 						</div>
 						<div> 
-							<span >Password</span>
-							<input type="password">
+							<span>Mật khẩu</span>
+							<input type="password" name="password" placeholder="Nhập mật khẩu" required/>
 						</div>				
 						<input type="submit" value="Đăng Nhập"> 
 					</form>
@@ -24,7 +24,7 @@
 					<div class="five">
 						<h1>25% </h1><span>discount</span>
 					</div>
-					<a href="register.html" class="create">Create an account</a>
+					<a href="./register.php" class="create">Create an account</a>
 					<div class="clearfix"> </div>
 				</div>
 				<div class="clearfix"> </div>

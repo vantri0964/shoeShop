@@ -9,7 +9,7 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		//get text
 		$userName = $_POST['username'];
-		$pass = $_POST['pass'];
+		$pass = $_POST['password'];
 
 		//check in database
 		$mLogin = new M_Login($userName, $pass);

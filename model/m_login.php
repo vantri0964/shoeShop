@@ -1,5 +1,5 @@
 <?php 
-require_once('./common/database.php');
+	require_once('common/database.php');
 
 class M_Login extends Database
 {	
