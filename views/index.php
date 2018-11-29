@@ -1,7 +1,7 @@
-
-<?php 
-	require_once('./header.php');
- ?>
+	<!-- add header -->
+	<?php 
+		require_once('./header.php');
+	?>
  	<!-- banner -->
 	<div class="banner">
 		<div class="banner-matter">
