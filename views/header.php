@@ -9,6 +9,7 @@
 	<!--theme-style-->
 	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!--//theme-style-->
+	<link rel="stylesheet" href="../css/etalage.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Sport Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -18,24 +19,24 @@
 	<link rel="stylesheet" href="../css/flexslider.css" type="text/css" media="screen" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<!--//fonts-->
-<style type="text/css" media="screen">
-	#title-product{
-		border-bottom: 5px double #d2232a;
-	}
-	#content-8{
-		border-right: 2px solid  #d2232a;
-	}
-	.jumbotron1{
-		background:white;
-		width: 400px;
-	}
-	.jumbotron img{
-		padding: 0px;
-	}
-	.jumbotron #jum1{
-		padding:3px 0px;
-	}
-</style>
+	<style type="text/css" media="screen">
+		#title-product{
+			border-bottom: 5px double #d2232a;
+		}
+		#content-8{
+			border-right: 2px solid  #d2232a;
+		}
+		.jumbotron1{
+			background:white;
+			width: 400px;
+		}
+		.jumbotron img{
+			padding: 0px;
+		}
+		.jumbotron #jum1{
+			padding:3px 0px;
+		}
+	</style>
 </head>
 <body> 
 	<!--header-->

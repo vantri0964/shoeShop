@@ -57,23 +57,23 @@
 					<div class="col-md-8" id="content-8">
 						<div class="col-md-6 grid-product-in">	
 							<div class=" product-grid">	
-								<a href="../single.html"><img class="img-responsive " src="../images/pr.png" alt=""></a>		
+								<a href="./single.php"><img class="img-responsive " src="../images/pr.png" alt=""></a>		
 								<div class="shoe-in">
-									<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
+									<h6><a href="./single.php">Lorem Ipsum is simply dummy </a></h6>
 									<label>$67.99</label>
-									<a href="single.html" class="store">Xem chi tiết</a>
+									<a href="./single.php" class="store">Xem chi tiết</a>
 								</div>
 
 								<b class="plus-on">+</b>
 							</div>	
 						</div>
 						<div class="col-md-6 grid-product-in">	
-							<div class=" product-grid">	
-								<a href="single.html"><img class="img-responsive " src="../images/pr1.png" alt=""></a>
+							<div class="product-grid">	
+								<a href="./single.php"><img class="img-responsive " src="../images/pr1.png" alt=""></a>
 								<div class="shoe-in">
-									<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
+									<h6><a href="single.php">Lorem Ipsum is simply dummy </a></h6>
 									<label>$67.99</label>
-									<a href="single.html" class="store">Xem chi tiết</a>
+									<a href="single.php" class="store">Xem chi tiết</a>
 								</div>
 
 								<b class="plus-on">+</b>
@@ -81,11 +81,11 @@
 						</div>
 						<div class="col-md-6 grid-product-in">	
 							<div class=" product-grid">	
-								<a href="single.html"><img class="img-responsive " src="../images/pr2.png" alt=""></a>
+								<a href="single.php"><img class="img-responsive " src="../images/pr2.png" alt=""></a>
 								<div class="shoe-in">
-									<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
+									<h6><a href="single.php">Lorem Ipsum is simply dummy </a></h6>
 									<label>$67.99</label>
-									<a href="single.html" class="store">Xem chi tiết</a>
+									<a href="single.php" class="store">Xem chi tiết</a>
 								</div>
 
 								<b class="plus-on">+</b>
