@@ -1824,6 +1824,9 @@ a.elit {
 a.create {
   width: 61%;
 }
+.err{
+	color: red;
+	background: red;
 }
 
 

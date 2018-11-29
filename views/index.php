@@ -1,6 +1,6 @@
 	<!-- add header -->
 	<?php 
-		require_once('./header.php');
+		require_once('header.php');
 	?>
  	<!-- banner -->
 	<div class="banner">
@@ -185,5 +185,5 @@
 	<!-- content -->
 	<!-- footer -->
 	<?php 
-		require_once('./footer.php');
+		require_once('footer.php');
 	 ?>
