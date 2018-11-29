@@ -44,7 +44,7 @@
 	</div>
 	<div class="header">
 		<div class="logo">
-			<a href="../index.html">
+			<a href="../index.php">
 				<img src="../images/logo.png" alt="" class="img-circle" height="100px" width="150px">
 			</a>
 		</div>
