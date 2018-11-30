@@ -54,8 +54,7 @@
 			<h2 align="center"><b>Sản Phẩm</b></h2>
 			<div class="product-top">
 				<!-- start-product -->
-					<div class="col-md-8" id="content-8">
-						<div class="col-md-6 grid-product-in">	
+						<div class="col-md-3 grid-product-in">	
 							<div class=" product-grid">	
 								<a href="./single.php"><img class="img-responsive " src="../images/pr.png" alt=""></a>		
 								<div class="shoe-in">
@@ -67,7 +66,7 @@
 								<b class="plus-on">+</b>
 							</div>	
 						</div>
-						<div class="col-md-6 grid-product-in">	
+						<div class="col-md-3 grid-product-in">	
 							<div class="product-grid">	
 								<a href="./single.php"><img class="img-responsive " src="../images/pr1.png" alt=""></a>
 								<div class="shoe-in">
@@ -79,7 +78,7 @@
 								<b class="plus-on">+</b>
 							</div>
 						</div>
-						<div class="col-md-6 grid-product-in">	
+						<div class="col-md-3 grid-product-in">	
 							<div class=" product-grid">	
 								<a href="single.php"><img class="img-responsive " src="../images/pr2.png" alt=""></a>
 								<div class="shoe-in">
@@ -91,7 +90,7 @@
 								<b class="plus-on">+</b>
 							</div>
 						</div>
-						<div class="col-md-6 grid-product-in">	
+						<div class="col-md-3 grid-product-in">	
 							<div class=" product-grid">	
 								<a href="single.html"><img class="img-responsive " src="../images/pr4.png" alt=""></a>
 								<div class="shoe-in">
@@ -103,78 +102,56 @@
 								<b class="plus-on">+</b>
 							</div>
 						</div>
-					</div>
-				<!-- end product -->
-				<!-- start slider -->
-					<div class="col-md-3 col-md-offset-1">
-						<section  class="sky-form">
-							<div class="sellers">
-								<h3 class="m_2">Special Offers</h3>
-								<section class="slider">
-									<div class="flexslider">
-										<ul class="slides">
-											<li>
-												<div class="tittle">
-													<img src="../images/si1.jpg" class="img-responsive" alt="" height="150px"  />
-													<h6>Giày 1</h6>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<a class="show1" href="#">SHOW ME MORE</a>
-												</div>
-											</li>
-											<li>
-												<div class="tittle">
-													<img src="../images/si2.jpg" class="img-responsive" alt=""/>
-													<h6>giày 2</h6>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<a class="show1" href="#">SHOW ME MORE</a>
-												</div>
-											</li>
-											<li>	
-												<div class="tittle">
-													<img src="../images/si1.jpg" class="img-responsive" alt=""/>
-													<h6>Giày 3</h6>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<p>Lorem ipsum dolor sit amet,</p>
-													<a class="show1" href="#">SHOW ME MORE</a>
-												</div>
-											</li>
-											<li>	
-												<div class="tittle">
-													<img src="../images/si3.jpg" class="img-responsive" alt=""/>
-													<h6>Giày 4</h6>
-													<p>Mô tả</p>
-													<a class="show1" href="#">SHOW ME MORE</a>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</section>
-							
-									<!-- FlexSlider -->
-										<script defer src="../js/jquery.flexslider.js"></script>
-										  <script type="text/javascript">
-											$(function(){
-											  SyntaxHighlighter.all();
-											});
-											$(window).load(function(){
-											  $('.flexslider').flexslider({
-												animation: "slide",
-												start: function(slider){
-												  $('body').removeClass('loading');
-												}
-											  });
-											});
-										  </script>
-									<!-- FlexSlider -->
+						<div class="col-md-3 grid-product-in">	
+							<div class=" product-grid">	
+								<a href="single.html"><img class="img-responsive " src="../images/pr4.png" alt=""></a>
+								<div class="shoe-in">
+									<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
+									<label>$67.99</label>
+									<a href="single.html" class="store">Xem chi tiết</a>
+								</div>
+
+								<b class="plus-on">+</b>
 							</div>
-						</section>	
-					</div>
-				<!-- end slider -->
+						</div>
+						<div class="col-md-3 grid-product-in">	
+							<div class=" product-grid">	
+								<a href="single.html"><img class="img-responsive " src="../images/pr4.png" alt=""></a>
+								<div class="shoe-in">
+									<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
+									<label>$67.99</label>
+									<a href="single.html" class="store">Xem chi tiết</a>
+								</div>
+
+								<b class="plus-on">+</b>
+							</div>
+						</div>
+						<div class="col-md-3 grid-product-in">	
+							<div class=" product-grid">	
+								<a href="single.html"><img class="img-responsive " src="../images/pr4.png" alt=""></a>
+								<div class="shoe-in">
+									<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
+									<label>$67.99</label>
+									<a href="single.html" class="store">Xem chi tiết</a>
+								</div>
+
+								<b class="plus-on">+</b>
+							</div>
+						</div>
+						<div class="col-md-3 grid-product-in">	
+							<div class=" product-grid">	
+								<a href="single.html"><img class="img-responsive " src="../images/pr4.png" alt=""></a>
+								<div class="shoe-in">
+									<h6><a href="single.html">Lorem Ipsum is simply dummy </a></h6>
+									<label>$67.99</label>
+									<a href="single.html" class="store">Xem chi tiết</a>
+								</div>
+
+								<b class="plus-on">+</b>
+							</div>
+						</div>
+				<!-- end product -->
+				
 					<div class="clearfix"> </div>
 			</div>
 			<!-- product-top -->
