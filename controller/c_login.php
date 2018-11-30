@@ -28,10 +28,9 @@
 		//accept
 		if($userNameErr == "" && $passErr == ""){
 			$name = $row['name'];
-			session_start();
 			$_SESSION['name'] = $name;
 			$_SESSION['role'] = $role;
-			require_once('../views/index.php');
+			header('location:../views/index.php');
 		}
 		//denial
 		if ( $userNameErr!="" || $passErr!="") {

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,8 +60,16 @@
 		<div  class="header-top">
 			<div class="header-grid">
 				<ul class="header-in">
-					<li ><a href="../views/account.php">Đăng nhập</a> </li>
-					<li ><a href="../views/register.php">Đăng ký</a> </li>			
+					<?php 
+						if(isset($_SESSION['name']))
+						{
+							echo "<li><a href='../views/account.php'>".$_SESSION['name']."</li>";
+							echo "<li><a href='../controller/c_logout.php'>Đăng xuất</a> </li>";
+						}else{
+							echo "<li ><a href='../views/account.php'>Đăng nhập</a> </li>";
+							echo "<li ><a href='../views/register.php'>Đăng ký</a> </li>";
+						}
+					 ?>		
 				</ul>
 				<div class="search-box">
 					<div id="sb-search" class="sb-search">
