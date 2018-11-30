@@ -8,10 +8,10 @@ class Database
 	private $pass = null;
 	private $sql = null;
 
-	function __construct($_url, $_user, $_pass){
-		$this->url = $_url;
-		$this->user = $_user;
-		$this->pass = $_pass;
+	function __construct(){
+		$this->url = 'mysql:host=localhost;dbname=shoeshop';
+		$this->user = 'shoeshop';
+		$this->pass = '123456';
 		
 		try {
 			$this->conn = new PDO($this->url, $this->user, $this->pass);

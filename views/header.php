@@ -1,5 +1,6 @@
-
-
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,11 +64,15 @@
 					<?php 
 						if(isset($_SESSION['name']))
 						{
-							echo "<li><a href='../views/account.php'>".$_SESSION['name']."</li>";
-							echo "<li><a href='../controller/c_logout.php'>Đăng xuất</a> </li>";
+							?>
+							<li><a href=''><?=$_SESSION['name']?></a></li>
+							<li><a href=''>Đăng xuất</a></li>
+							<?php
 						}else{
-							echo "<li ><a href='../views/account.php'>Đăng nhập</a> </li>";
-							echo "<li ><a href='../views/register.php'>Đăng ký</a> </li>";
+							?>
+							<li ><a href='../views/account.php'>Đăng nhập</a> </li>
+							<li ><a href='../views/register.php'>Đăng ký</a> </li>
+							<?php
 						}
 					 ?>		
 				</ul>

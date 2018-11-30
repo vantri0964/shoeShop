@@ -1,12 +1,35 @@
 	<?php 
 		require_once('header.php');
-	 ?>
+		if(isset($_SESSION['name'])){
+			header('location:index.php');
+		}
+		include_once('../controller/c_user.php');
+
+		$userNameErr = null;
+		$passErr = null;
+
+		if(($_SERVER['REQUEST_METHOD'] == 'POST')){
+				//get text
+			$userName = $_POST['username'];
+			$pass = $_POST['password'];
+
+			$c_login = new C_User();
+			$errArr = $c_login->loginUser($userName, $pass);
+
+			if($errArr == null){
+				header('location:index.php');
+			}else{
+				$userNameErr = $errArr['userNameErr'];
+				$passErr = $errArr['passErr'];
+			}
+		}
+	?>
 	<div class="container">
 		<div class="account">
 			<h2>Đăng nhập</h2>
 			<div class="account-pass">
 				<div class="col-md-7 account-top">
-					<form action="../controller/c_login.php" method="POST">
+					<form action="" method="POST">
 						<div> 	
 							<span>Tài khoản: (*) </span>
 							<input type="text" name="username" placeholder="Nhập tài khoản" required/> 

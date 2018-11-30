@@ -1,7 +1,7 @@
 <?php 
 	require_once('common/database.php');
 
-class M_Login extends Database
+class M_User extends Database
 {	
 	private $userName;
 	private $pass;
@@ -9,7 +9,7 @@ class M_Login extends Database
 	{
 		$this->userName = trim($_userName);
 		$this->pass = md5($_pass);
-		parent::__construct('mysql:host=localhost;dbname=shoeshop', 'shoeshop', '123456');
+		parent::__construct();
 	}
 	function queryUserName(){
 		$conn = parent::getConn();
@@ -29,6 +29,7 @@ class M_Login extends Database
 		    $stmt=null;
 		    $conn=null;
 		    return true;
+		    
 		}
 	}
 
