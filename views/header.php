@@ -66,7 +66,7 @@
 						{
 							?>
 							<li><a href=''><?=$_SESSION['name']?></a></li>
-							<li><a href=''>Đăng xuất</a></li>
+							<li><a href='logout.php'>Đăng xuất</a></li>
 							<?php
 						}else{
 							?>
@@ -118,8 +118,8 @@
 								<li><a href="#">3</a></li>
 							</ul>
 						</li>		
-						<li><a href="../product.html">Giới thiệu</a></li>
-						<li><a href="../views/contact.php">Liên hệ</a></li>
+						<li><a href="abouts.php">Giới thiệu</a></li>
+						<li><a href="contact.php">Liên hệ</a></li>
 					</ul>
 					<script type="text/javascript" src="../js/nav.js"></script>
 				</div><!-- end h_menu4 -->

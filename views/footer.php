@@ -44,22 +44,13 @@
 					<li><a href="#"><i class="twitter"> </i></a></li>
 				</ul>
 				<div class="letter run-top">
-					<h4> Góp Ý </h4>
-				<div class="cont-1" >
-					<form>
-						<input type="text" class="textbox" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-						<input type="text" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-						<textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
-						 <div class="smt">
-							<input type="submit" value="send">
-						 </div>
-					</form>
-			      </div>
 					<p class="footer-class"> © 2018 Shoe Shop | Nhóm </p>
 				</div>
 
 			</div>
 			<div class="clearfix"> </div>
 		</div>
+			<script src="../js/jquery.min.js"></script>
+
 	</body>
 	</html>

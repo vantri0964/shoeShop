@@ -731,8 +731,10 @@ b.plus-on {
 .account-top div,.register-top div{
 	padding:0.5em 0;
 }
-.account-top input[type="text"],.account-top textarea,.account-top input[type="password"],
-.register-top input[type="text"],.register-top textarea,.register-top input[type="password"]{
+.account-top input[type="email"], .account-top input[type="text"], .account-top textarea, 
+.account-top input[type="password"], 
+.register-top input[type="text"], .register-top textarea, 
+.register-top input[type="password"], .register-top input[type="email"]{
 	padding:14px;
 	width:100%;
 	background:#fff;
@@ -741,7 +743,7 @@ b.plus-on {
 	color:#464646;
 	font-size:1em;	
 }
-.register-top input[type="text"],.register-top textarea,.register-top input[type="password"]{
+.register-top input[type="email"], .register-top input[type="text"],.register-top textarea,.register-top input[type="password"]{
 	width:60%;
 }
 .account-top textarea,.register-top textarea{
@@ -1411,7 +1413,7 @@ span.price-in {
 .five {
   right: 28%;
 }
-.register-top input[type="text"], .register-top textarea, .register-top input[type="password"] {
+.register-top input[type="email"],.register-top input[type="text"], .register-top textarea, .register-top input[type="password"] {
   width: 100%;
 }
 }
@@ -1455,7 +1457,7 @@ h6.your-in {
 .contact h2 {
   padding: 0 0 0.5em;
 }
-.account input[type="text"], .account textarea, .account input[type="password"] {
+.account input[type="email"],.account input[type="text"], .account textarea, .account input[type="password"] {
   width: 100%
 }
 .top-in-single {
@@ -1765,8 +1767,8 @@ a.elit {
 	padding:0 0 0.2em;
 }
 .account input[type="text"], .account textarea, .account input[type="password"] 
-,.contact-grid input[type="text"], .contact-grid textarea,
-.register-top input[type="text"], .register-top textarea, .register-top input[type="password"]{
+,.account input[type="email"],.contact-grid input[type="text"], .contact-grid textarea, .contact-grid input[type="email: ;"],
+.register-top input[type="text"], .register-top input[type="email"], .register-top textarea, .register-top input[type="password"]{
   padding: 10px;
 }
 .account span,.contact-grid span, .register-top span {
@@ -1841,7 +1843,7 @@ a.create {
 
 
 /* phần đánh giá của footer*/
-.cont-1 input[type="text"] {
+.cont-1 input[type="text"], .cont-1 input[type="email"]{
   display: block;
   width: 80%;
   padding: 0.4em 1em;

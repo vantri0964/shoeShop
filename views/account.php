@@ -32,7 +32,7 @@
 					<form action="" method="POST">
 						<div> 	
 							<span>Tài khoản: (*) </span>
-							<input type="text" name="username" placeholder="Nhập tài khoản" required/> 
+							<input type="text" name="username" id='username' placeholder="Nhập tài khoản" minlength=6 maxlength="50" required/> 
 							<?php 
 								if(isset($userNameErr))
 									echo "<span class='text-danger'>".$userNameErr."</span>"; 
@@ -40,7 +40,7 @@
 						</div>
 						<div> 
 							<span>Mật khẩu: (*)</span>
-							<input type="password" name="password" placeholder="Nhập mật khẩu" required/>
+							<input type="password" name="password" placeholder="Nhập mật khẩu" minlength=6 maxlength="100" required/>
 							<?php 
 								if(isset($passErr)) 
 									echo "<span class='text-danger'>".$passErr."</span>"; 
