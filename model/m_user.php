@@ -43,7 +43,7 @@ class M_User extends Database
 		$conn =parent::getConn();
 		$stmt = null;
 		try {
-			$stmt = $conn->prepare("SELECT * FROM users WHERE username=:username and password=:password");
+			$stmt = $conn->prepare('SELECT * FROM users WHERE username=:username and password=:password');
 			$stmt->bindParam(':username', $this->userName);
 			$stmt->bindParam(':password', $this->pass);
 			$stmt->execute();
@@ -62,31 +62,15 @@ class M_User extends Database
 	    }
 	}
 	//name, username, email, sex, birthday, phone, crtime
-	public function inserUser($name, $username, $email, $sex, $birthday, $phone, $address, $password)
+	public function inserUser($userArr=array())
 	{
-		$sql = "INSERT INTO users (name, username, email, sex, birthday, phone, address, password) 
-		VALUES (N':name', ':username', ':email', ':sex', ':birthday', ':phone', ':address', ':password')";
-		$this->name = $name;
-		$this->userName = $username;
-		$this->email = $email;
-		$this->sex = $sex;
-		$this->birthday = $birthday;
-		$this->phone = $phone;
-		$this->address = $address;
-		$this->pass = md5($password);
 		$conn = parent::getConn();
 		$stmt = null;
 		try {
-			$stmt = $conn->prepare($sql);
-			$stmt->bindParam(':name', $this->name);
-			$stmt->bindParam(':password',$this->userName);
-			$stmt->bindParam(':email', $this->email);
-			$stmt->bindParam(':sex', $this->sex);
-			$stmt->bindParam(':birthday', $this->birthday);
-			$stmt->bindParam(':phone', $this->phone);
-			$stmt->bindParam(':address', $this->address);
-			$stmt->bindParam(':password', $this->password);
-			$stmt->execute();
+			$stmt = $conn->prepare('INSERT INTO users (name, username, email, sex, birthday, phone, address, password) VALUES ( N'.'?'.', ?, ?, ?, ?, ?, ?, ?)');
+			$stmt->execute($userArr);
+			$stmt=null;
+			$conn=null;
 			return true;
 		}catch(PDOException $e){
 	    	echo "Lỗi insert: " . $e->getMessage();

@@ -3,9 +3,6 @@
  ?>
 
  <?php
- 	if(isset($_SESSION['name'])){
-		header('location:index.php');
-	}
  	require_once('../controller/c_user.php');
  	$usernameErr ='';
 	$nameErr = ''; 
@@ -25,9 +22,9 @@
  		$errArr = $c_user->regUser($name, $username, $email, $pass, $pass2);
 
  		if($errArr== null){
- 			echo "<script>alert('Đăng ký tài khoản thành công!')
+			// header('location:account.php');
+			echo "<script>alert('Đăng ký tài khoản thành công!')
 			</script>";
-			header('location:account.php');
  		}else{
  			$usernameErr = $errArr['username'] ;
 			$nameErr = $errArr['name'];

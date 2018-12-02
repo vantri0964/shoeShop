@@ -10,7 +10,8 @@ class C_User
 		$errArr = array('userNameErr' => null, 'passErr' => null);
 		$m_Login = new M_User();
 		$had = $m_Login->queryUserName($_username);
-		$user = $m_Login->queryUser($_username, $_pass);	
+		$user = $m_Login->queryUser($_username, $_pass);
+		$m_Login->disconnect();
 		if ($had == 0) {
 			$errArr['userNameErr'] = "Tài khoản không chính xác!";
 			return $errArr;
@@ -55,7 +56,9 @@ class C_User
 			($errArr['pass2'] == null)
 		){
 			$m_user = new M_User();
-			$m_user->inserUser($name, $username, $email, '', '', '', '',$password);
+			$userArr = array(ucwords($name), $username, $email, null, null, null, null,md5($pass));
+			//chuyển đổi tên viết hoa chữ đầu và md5 pass
+			$m_user->inserUser($userArr);
 			return null;
 		}else{
 			return $errArr;
