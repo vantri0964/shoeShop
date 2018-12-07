@@ -22,9 +22,13 @@
  		$errArr = $c_user->regUser($name, $username, $email, $pass, $pass2);
 
  		if($errArr== null){
-			// header('location:account.php');
-			echo "<script>alert('Đăng ký tài khoản thành công!')
-			</script>";
+			echo "<script type='text/javascript'>
+            $(document).ready(function() {
+                $('.register').html(function(){
+                	return '<h2>Đăng ký tài khoản thành công<h2><br/><a href=\'account.php\' alt=\'Đăng nhập\' ><input class=\'btn btn-success btn-lg\' type=submit value=\'Đăng nhập\'></a>';
+                	});
+            });
+          </script>";
  		}else{
  			$usernameErr = $errArr['username'] ;
 			$nameErr = $errArr['name'];

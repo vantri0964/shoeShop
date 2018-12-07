@@ -63,16 +63,16 @@
 			<div class="header-grid">
 				<ul class="header-in">
 					<?php 
-						if(isset($_SESSION['name']))
+						if(isset($_SESSION['name']) && isset($_SESSION['id']) && isset($_SESSION['role']))
 						{
 							?>
-							<li><a href=''><?=$_SESSION['name']?></a></li>
+							<li><a href='profile.php'><?=$_SESSION['name']?></a></li>
 							<li><a href='logout.php'>Đăng xuất</a></li>
 							<?php
 						}else{
 							?>
-							<li ><a href='../views/account.php'>Đăng nhập</a> </li>
-							<li ><a href='../views/register.php'>Đăng ký</a> </li>
+							<li ><a href='account.php'>Đăng nhập</a> </li>
+							<li ><a href='register.php'>Đăng ký</a> </li>
 							<?php
 						}
 					 ?>		
@@ -95,7 +95,23 @@
 				<!-- //search-scripts -->
 
 				<div class="online">
-					<a href="views/product.php">Sản Phẩm</a>
+					<?php
+						if(isset($_SESSION['role'])){
+							if($_SESSION['role'] == '1'){
+								?>
+								<a href="admin.php">ADMIN</a>
+								<?php
+							}else{
+							?>
+								<a href="product.php">Sản Phẩm</a>
+							<?php
+							}
+						}else{
+							?>
+								<a href="product.php">Sản Phẩm</a>
+							<?php
+						}
+					?>
 				</div>
 
 				<div class="clearfix"> </div>
@@ -124,7 +140,13 @@
 					</ul>
 					<script type="text/javascript" src="../js/nav.js"></script>
 				</div><!-- end h_menu4 -->
-				
+				<!-- cart -->
+							<div class="col-md-2 col-md-offset-4 h_menu4">
+								<ul class="nav">
+									<li><a href="checkout.php" title=""><span class="glyphicon glyphicon-shopping-cart"></span > Giỏ hàng <span id="sumCart">0</span></a></li>
+								</ul>
+							</div>
+							<!-- end cart -->
 				<div class="clearfix"> </div>
 			</div>
 		</div>

@@ -5,21 +5,22 @@
 		}
 		include_once('../controller/c_user.php');
 
-		$userNameErr = null;
+		$usernameErr = null;
 		$passErr = null;
 
-		if(($_SERVER['REQUEST_METHOD'] == 'POST')){
-				//get text
-			$userName = $_POST['username'];
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+			//get text
+			$username = $_POST['username'];
 			$pass = $_POST['password'];
-
+			//controller
 			$c_login = new C_User();
-			$errArr = $c_login->loginUser($userName, $pass);
+			$errArr = $c_login->loginUser($username, $pass);
 
+			//accept
 			if($errArr == null){
 				header('location:index.php');
 			}else{
-				$userNameErr = $errArr['userNameErr'];
+				$usernameErr = $errArr['usernameErr'];
 				$passErr = $errArr['passErr'];
 			}
 		}
@@ -34,8 +35,8 @@
 							<span>Tài khoản: (*) </span>
 							<input type="text" name="username" id='username' placeholder="Nhập tài khoản" minlength=6 maxlength="50" required/> 
 							<?php 
-								if(isset($userNameErr))
-									echo "<span class='text-danger'>".$userNameErr."</span>"; 
+								if(isset($usernameErr))
+									echo "<span class='text-danger'>".$usernameErr."</span>"; 
 							?>
 						</div>
 						<div> 

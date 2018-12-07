@@ -1375,6 +1375,9 @@ a.sign {
 .grid-product-in {
   float: left;
   width: 50%;
+  height: 300px;
+  width: 214px;
+  size: cover;
 }
 .grid-product-in:nth-child(3) {
   display:none;
@@ -1918,4 +1921,11 @@ a.show1 {
 a.show1:hover {
 	background: #000000;
 	color: #ed1c24;
+}
+#detail {
+	margin: 50px;
+	padding: 20px;
+}
+#detail p{
+	color: #000000;
 }

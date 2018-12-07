@@ -21,48 +21,51 @@ class M_User extends Database
 		$stmt = null;
 		try {
 			$stmt = $conn->prepare("SELECT username FROM users WHERE username=:username");
-			$stmt->bindParam(":username", $this->userName);
+			$stmt->bindValue(":username", $this->userName);
 			$stmt->execute();
 		}catch(PDOException $e){
 	    	echo "Query failed: " . $e->getMessage();
 	    }
-	    if($stmt->rowCount() == 0){
+	    if($stmt->rowCount() == 0){ //không có
 	    	$stmt=null;
 	    	$conn=null;
 	    	return 0;
-	    }else{
+	    }else{ //có
 		    $stmt=null;
 		    $conn=null;
 		    return 1;
 		}
 	}
 
-	function queryUser($_userName, $_pass){
-		$this->userName = trim($_userName);
+	function queryUser($_username, $_pass){
+		$this->userName = trim($_username);
 		$this->pass = md5($_pass);
 		$conn =parent::getConn();
 		$stmt = null;
 		try {
-			$stmt = $conn->prepare('SELECT * FROM users WHERE username=:username and password=:password');
-			$stmt->bindParam(':username', $this->userName);
-			$stmt->bindParam(':password', $this->pass);
+			$stmt = $conn->prepare('SELECT id, name, role FROM users WHERE username = :username AND password = :pass');
+			$stmt->bindValue(':username', $this->userName);
+			$stmt->bindValue(':pass', $this->pass);
 			$stmt->execute();
 		}catch(PDOException $e){
 	    	echo "Query failed: " . $e->getMessage();
 	    }
-	    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-	    if($row==null){
+
+	    $row = $stmt->rowCount();
+	    
+	    if($row == 0 ){
 	    	$stmt=null;
 	    	$conn=null;
-	    	return false;
+	    	return 0;
 	    }else{
+	    	$data = $stmt->fetch(PDO::FETCH_ASSOC);
 		    $stmt=null;
 		    $conn=null;
-		    return $row;
+		    return $data;
 	    }
 	}
 	//name, username, email, sex, birthday, phone, crtime
-	public function inserUser($userArr=array())
+	public function insertUser($userArr=array())
 	{
 		$conn = parent::getConn();
 		$stmt = null;
@@ -74,6 +77,48 @@ class M_User extends Database
 			return true;
 		}catch(PDOException $e){
 	    	echo "Lỗi insert: " . $e->getMessage();
+	    }
+		$stmt=null;
+		$conn=null;
+		return false;
+	}
+	function queryProfile($_id){
+		$conn =parent::getConn();
+		$stmt = null;
+		try {
+			$stmt = $conn->prepare('SELECT name, username, email, sex, birthday, phone, address FROM users WHERE id = :id');
+			$stmt->bindValue(':id', $_id);
+			$stmt->execute();
+		}catch(PDOException $e){
+	    	echo "Query failed: " . $e->getMessage();
+	    }
+
+	    $row = $stmt->rowCount();
+	    
+	    if($row == 0 ){
+	    	$stmt=null;
+	    	$conn=null;
+	    	return 0;
+	    }else{
+	    	$data = $stmt->fetch(PDO::FETCH_ASSOC);
+		    $stmt=null;
+		    $conn=null;
+		    return $data;
+	    }
+	}
+	function updateProfile($profileArr = array()){
+		$conn = parent::getConn();
+		$stmt = null;
+		try {
+			$stmt = $conn->prepare('UPDATE users SET sex=? , birthday=? , phone=? , address=N'.'?'.' WHERE id=? ');
+			$stmt->execute($profileArr);
+		}catch(PDOException $e){
+	    	echo "Lỗi update: " . $e->getMessage();
+	    }
+	    if($stmt->rowCount() > 0){
+			$stmt=null;
+			$conn=null;
+			return true;
 	    }
 		$stmt=null;
 		$conn=null;

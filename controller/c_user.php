@@ -7,20 +7,25 @@ class C_User
 	public function loginUser($_username, $_pass)
 	{
 		//model
-		$errArr = array('userNameErr' => null, 'passErr' => null);
+		
+		$errArr = array('usernameErr' => null, 'passErr' => null);
 		$m_Login = new M_User();
 		$had = $m_Login->queryUserName($_username);
 		$user = $m_Login->queryUser($_username, $_pass);
-		$m_Login->disconnect();
 		if ($had == 0) {
-			$errArr['userNameErr'] = "Tài khoản không chính xác!";
+			$errArr['usernameErr'] = 'Tài khoản / Email không chính xác!';
+
 			return $errArr;
 		}elseif($user == 0){
-			$errArr['userNameErr'] = "<script>$('#username').val('$_username')</script>";
-			$errArr['passErr'] = "Mật khẩu không chính xác!";
+			$errArr['usernameErr'] = "<script>$('#username').val('$_username')</script>";
+			$errArr['passErr'] = 'Mật khẩu không chính xác!';
 			return $errArr;
 		}else{
+
+			$_SESSION['id'] = $user['id'];
 			$_SESSION['name'] = $user['name'];
+			$_SESSION['role'] = $user['role'];
+
 			return null;
 		}
 	}
@@ -58,16 +63,41 @@ class C_User
 			$m_user = new M_User();
 			$userArr = array(ucwords($name), $username, $email, null, null, null, null,md5($pass));
 			//chuyển đổi tên viết hoa chữ đầu và md5 pass
-			$m_user->inserUser($userArr);
+			$m_user->insertUser($userArr);
 			return null;
 		}else{
 			return $errArr;
+		}
+	}
+	public function showProfile($_id)
+	{
+		
+		$m_User = new M_User();
+		$m_Profile = $m_User->queryProfile($_id);
+		if($m_Profile == 0){
+			return 0;
+		}else{
+			return $m_Profile;
+		}
+	}
+	public function updateProfile($profileArr = array())
+	{
+		$m_User = new M_User();
+		$ok = $m_User->updateProfile($profileArr);
+		if($ok){
+			echo "<script>alert('Cập nhật thành công!')</script>";
+		}else{
+			echo "<script>alert('Cập nhật thành công!')</script>";
 		}
 	}
 	public function outUser()
 	{
 		if (isset($_SESSION['name'])) 
 			unset($_SESSION['name']);
+		if (isset($_SESSION['id'])) 
+			unset($_SESSION['id']);
+		if (isset($_SESSION['role'])) 
+			unset($_SESSION['role']);
 	}
 }
 
